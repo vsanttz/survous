@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survous </title>
+    <meta name="description" content="Transformamos ideias em experiências digitais revolucionárias. Design moderno, desenvolvimento web e soluções completas para empresas inovadoras.">
+    <meta name="keywords" content="design, desenvolvimento web, frontend, ui/ux, logotipo, empresa digital, tecnologia">
+    <meta name="author" content="Survous">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Survous">
+    <meta property="og:description" content="Transformamos ideias em experiências digitais revolucionárias.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://survous.com/og-image.jpg">
+    <meta property="og:url" content="https://survous.com">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Survous">
+    <meta name="twitter:description" content="Transformamos ideias em experiências digitais revolucionárias.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800&family=Segoe+UI:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" as="script">
+    <link rel="preload" href="logo.png" as="image">
+</head>
+<body>
+    <!-- Loading state -->
+    <div class="loading-overlay" id="loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Carregando experiência...</div>
+    </div>
+    
+    <!-- Progress bar -->
+    <div class="loading-bar" id="loadingBar"></div>
+    
+    <!-- Partículas de fundo -->
+    <div id="particles-js" aria-hidden="true"></div>
+    
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav aria-label="Navegação principal">
+                <a href="#" class="logo" aria-label="Survous - Página inicial">
+                    <img src="logo.png" alt="Survous Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-main">SURVOUS</span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+                    <a href="#home" class="nav-link">Início</a>
+                    <a href="#about" class="nav-link">Sobre</a>
+                    <a href="#services" class="nav-link">Serviços</a>
+                    <a href="#contact" class="nav-link">Contato</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="menu-close" id="menuClose" aria-label="Fechar menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-nav">
+            <a href="#home" class="nav-link">Início</a>
+            <a href="#about" class="nav-link">Sobre</a>
+            <a href="#services" class="nav-link">Serviços</a>
+            <a href="#contact" class="nav-link">Contato</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <p>Transformando ideias em realidade</p>
+        </div>
+    </div>
+    
+    <!-- Seção Hero -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">INOVAÇÃO & TECNOLOGIA</div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Soluções Digitais</span>
+                    <br>que Revolucionam
+                </h1>
+                
+                <div class="typewriter-container">
+                    <h2 class="typewriter" id="typewriterText">Design, desenvolvimento, inovação...</h2>
+                </div>
+                
+                <p class="hero-description">
+                    Criamos experiências digitais únicas que combinam design moderno, tecnologia de ponta e estratégias de negócio para resultados extraordinários.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary btn-premium">
+                        <span>Comece seu Projeto</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <span>Nossos Serviços</span>
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                </div>
+                
+                <!-- Social proof -->
+                <div class="social-proof">
+                    <div class="proof-item">
+                        <i class="fas fa-star"></i>
+                        <span>Avaliação 5.0</span>
+                    </div>
+                    <div class="proof-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>+50 Projetos</span>
+                    </div>
+                    <div class="proof-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Entrega Rápida</span>
+                    </div>
+                </div>
+                
+                <!-- Scroll indicator -->
+                <div class="scroll-indicator" aria-hidden="true">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Sobre -->
+    <section id="about" class="about-section reveal">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-content">
+                    <span class="section-subtitle">NOSSA MISSÃO</span>
+                    <h2 class="section-title">Revolucionando o <span class="gradient-text">Digital</span></h2>
+                    <div class="about-description">
+                        <p>Somos uma empresa visionária que transforma ideias ambiciosas em realidades digitais extraordinárias. Combinando design inovador, tecnologia de ponta e estratégia de negócios.</p>
+                        <p>Nossa missão é criar experiências que não apenas impressionam, mas também entregam resultados mensuráveis e impacto duradouro para empresas que buscam se destacar no mercado digital.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-highlight">
+                            <div class="stat-highlight-number">100%</div>
+                            <div class="stat-highlight-label">Satisfação</div>
+                        </div>
+                        <div class="stat-highlight">
+                            <div class="stat-highlight-number">24/7</div>
+                            <div class="stat-highlight-label">Suporte</div>
+                        </div>
+                        <div class="stat-highlight">
+                            <div class="stat-highlight-number">3+</div>
+                            <div class="stat-highlight-label">Anos Exp.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-card visual-card-1">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Inovação Constante</h4>
+                        <p>Sempre à frente das tendências tecnológicas</p>
+                    </div>
+                    <div class="visual-card visual-card-2">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Segurança Máxima</h4>
+                        <p>Proteção de dados e privacidade</p>
+                    </div>
+                    <div class="visual-card visual-card-3">
+                        <div class="card-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Performance</h4>
+                        <p>Velocidade e otimização premium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Tecnologias -->
+    <section class="tech-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">TECNOLOGIAS</span>
+                <h2 class="section-title">PLATAFORMAS DE <span class="gradient-text">EXCELÊNCIA</span></h2>
+                <p class="section-description">Utilizamos as ferramentas mais avançadas do mercado</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item card-3d">
+                    <div class="tech-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h4>React & Next.js</h4>
+                    <p>Interfaces dinâmicas e performáticas</p>
+                </div>
+                <div class="tech-item card-3d">
+                    <div class="tech-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h4>JavaScript ES6+</h4>
+                    <p>Código moderno e otimizado</p>
+                </div>
+                <div class="tech-item card-3d">
+                    <div class="tech-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <h4>Figma & Adobe CC</h4>
+                    <p>Design colaborativo e prototipagem</p>
+                </div>
+                <div class="tech-item card-3d">
+                    <div class="tech-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Performance</h4>
+                    <p>Otimização e velocidade máxima</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Serviços -->
+    <section id="services" class="services-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">NOSSOS SERVIÇOS</span>
+                <h2 class="section-title">SOLUÇÕES <span class="gradient-text">COMPLETAS</span></h2>
+                <p class="section-description">Oferecemos um ecossistema completo para sua presença digital</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card card-3d" data-service="web">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="service-number">01</div>
+                        <h3 class="service-title">Desenvolvimento Web</h3>
+                        <p class="service-description">
+                            Sites modernos com design responsivo, performance otimizada e tecnologia de ponta para todos os dispositivos.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Design Responsivo</li>
+                            <li><i class="fas fa-check"></i> Performance SEO</li>
+                            <li><i class="fas fa-check"></i> Animações Modernas</li>
+                            <li><i class="fas fa-check"></i> PWA Ready</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span class="service-tag">FrontEnd & BackEnd</span>
+                        </div>
+                    </div>
+                    <div class="service-card-hover"></div>
+                </div>
+                
+                <div class="service-card card-3d" data-service="design">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="service-number">02</div>
+                        <h3 class="service-title">Design UI/UX Premium</h3>
+                        <p class="service-description">
+                            Interfaces intuitivas e experiências de usuário focadas em conversão, engajamento e retenção.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> User Research</li>
+                            <li><i class="fas fa-check"></i> Prototipagem Interativa</li>
+                            <li><i class="fas fa-check"></i> Design System</li>
+                            <li><i class="fas fa-check"></i> User Testing</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span class="service-tag">UI/UX Expert</span>
+                        </div>
+                    </div>
+                    <div class="service-card-hover"></div>
+                </div>
+                
+                <div class="service-card card-3d" data-service="branding">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-brush"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="service-number">03</div>
+                        <h3 class="service-title">Identidade Visual</h3>
+                        <p class="service-description">
+                            Desenvolvimento de logotipo e identidade visual profissional para empresas/marca com estratégia.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Logo Design</li>
+                            <li><i class="fas fa-check"></i> Manual da Marca</li>
+                            <li><i class="fas fa-check"></i> Brand Assets</li>
+                            <li><i class="fas fa-check"></i> Estratégia Visual</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span class="service-tag">Branding</span>
+                        </div>
+                    </div>
+                    <div class="service-card-hover"></div>
+                </div>
+            </div>
+            
+            <!-- Stats counter -->
+            <div class="stats-container reveal">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Projetos Concluídos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="36">0</div>
+                    <div class="stat-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">% Satisfação</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Processo -->
+    <section class="process-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">NOSSO PROCESSO</span>
+                <h2 class="section-title">COMO <span class="gradient-text">TRABALHAMOS</span></h2>
+                <p class="section-description">Metodologia ágil e eficiente para resultados extraordinários</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Descoberta & Planejamento</h3>
+                        <p>Análise completa do projeto, definição de escopo e planejamento estratégico.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Design & Prototipagem</h3>
+                        <p>Criação de interfaces e protótipos interativos para validação.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Desenvolvimento</h3>
+                        <p>Implementação com código limpo, otimizado e seguindo melhores práticas.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Entrega & Suporte</h3>
+                        <p>Entrega do projeto completo com suporte contínuo e manutenção.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Contato -->
+    <section id="contact" class="contact-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">VAMOS CONVERSAR</span>
+                <h2 class="section-title">PRONTO PARA <span class="gradient-text">INOVAR?</span></h2>
+                <p class="section-description">Tem um projeto revolucionário em mente? Vamos transformar sua visão em realidade digital.</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-method card-3d">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>survouscreative@gmail.com</p>
+                            <span class="contact-sub">Resposta em até 24h</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method card-3d">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Instagram</h4>
+                            <p>@survousbr</p>
+                            <span class="contact-sub">Siga para novidades</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method card-3d">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horário Comercial</h4>
+                            <p>Segunda - Sexta</p>
+                            <span class="contact-sub">9h às 18h (Brasília)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method card-3d">
+                        <div class="contact-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Suporte</h4>
+                            <p>Disponível 24/7</p>
+                            <span class="contact-sub">Para clientes ativos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form card-3d">
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nome Completo *</label>
+                                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                                <div class="form-error" id="nameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Corporativo *</label>
+                                <input type="email" id="email" name="email" placeholder="seu@empresa.com" required>
+                                <div class="form-error" id="emailError"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Empresa</label>
+                                <input type="text" id="company" name="company" placeholder="Sua empresa">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Tipo de Projeto *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Selecione um projeto</option>
+                                    <option value="website">Website Corporativo</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="app">Aplicativo Mobile</option>
+                                    <option value="branding">Branding/Identidade Visual</option>
+                                    <option value="consultoria">Consultoria Digital</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                                <div class="form-error" id="subjectError"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Orçamento Aproximado</label>
+                            <select id="budget" name="budget">
+                                <option value="">Selecione uma faixa</option>
+                                <option value="ate-5k">Até R$ 5.000</option>
+                                <option value="5k-15k">R$ 5.000 - R$ 15.000</option>
+                                <option value="15k-50k">R$ 15.000 - R$ 50.000</option>
+                                <option value="50k+">Acima de R$ 50.000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Descreva seu Projeto *</label>
+                            <textarea id="message" name="message" placeholder="Conte-nos sobre sua visão, objetivos e desafios..." required></textarea>
+                            <div class="form-error" id="messageError"></div>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <button type="submit" class="btn btn-primary btn-premium submit-btn">
+                                <span class="btn-text">Enviar Proposta</span>
+                                <span class="btn-loading">
+                                    <i class="fas fa-spinner fa-spin"></i> Processando...
+                                </span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <p class="form-note">* Campos obrigatórios. Entraremos em contato em até 24 horas úteis.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="logo.png" alt="Survous Creative Logo" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-main">SURVOUS</span>
+                            <span class="logo-accent">CREATIVE</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformando visões em experiências digitais revolucionárias desde 2020.</p>
+                    <div class="footer-certifications">
+                        <span class="cert-badge">✓ Design Award 2023</span>
+                        <span class="cert-badge">✓ Google Partner</span>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre Nós</a>
+                    <a href="#services">Serviços</a>
+                    <a href="#contact">Contato</a>
+                    <a href="#">Blog</a>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Serviços</h4>
+                    <a href="#services">Desenvolvimento Web</a>
+                    <a href="#services">Design UI/UX</a>
+                    <a href="#services">Identidade Visual</a>
+                    <a href="#services">Consultoria Digital</a>
+                    <a href="#services">Otimização SEO</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Conecte-se</h4>
+                    <p>Siga-nos para inspiração e novidades</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/survousbr/" target="_blank" rel="noopener noreferrer"
+                           aria-label="Instagram" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Behance" class="social-icon behance">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="#" aria-label="GitHub" class="social-icon github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h5>Newsletter</h5>
+                        <p>Insights e tendências digitais</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="seu@email.com" aria-label="Email para newsletter">
+                            <button type="submit" aria-label="Inscrever-se">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p class="copyright">© 2023 <span class="copyright-accent">SURVOUS CREATIVE</span>. Todos os direitos reservados.</p>
+                    <p class="footer-credits">Desenvolvido com <i class="fas fa-heart"></i> e muito café</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <!-- Success modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="modal-title">Proposta Enviada!</h3>
+            <p class="modal-text" id="successMessage"></p>
+            <div class="modal-actions">
+                <button class="btn btn-primary modal-close" id="closeModal">Fechar</button>
+                <button class="btn btn-secondary" id="scheduleCall">
+                    <i class="fas fa-calendar-alt"></i> Agendar Call
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-info-circle"></i>
+            <span class="toast-text"></span>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
